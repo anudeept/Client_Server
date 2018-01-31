@@ -18,6 +18,8 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>Application_Client_Simulator</finalName>
+
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

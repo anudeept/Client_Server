@@ -50,5 +50,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>Application_Server</finalName>
     </build>
 </project>
