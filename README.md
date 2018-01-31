@@ -30,14 +30,14 @@ Download Client_Server project from GitHub
 ````
 - Application_Server
   $ cd Application_Server/target
-  $ java -jar Application_Server.jar
+  $ java -jar Application_Server-jar-with-dependencies.jar
 
 - Application_Client
   $ cd Application_Client/target
-  $ java -jar Application_Client.jar
+  $ java -jar Application_Client-jar-with-dependencies.jar
 
 - Application_Client_Simulator
   $ cd Application_Client_Simulator/target
-  $ java -jar Application_Client_Simulator.jar
+  $ java -jar Application_Client_Simulator-jar-with-dependencies.jar
 
 ````
