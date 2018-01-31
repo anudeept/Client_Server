@@ -48,13 +48,10 @@ public class Client implements Runnable {
             }
         } catch (UnknownHostException e) {
             close_Connection();
-            e.printStackTrace();
         } catch (IOException e) {
             close_Connection();
-            e.printStackTrace();
         } catch (InterruptedException e) {
             close_Connection();
-            e.printStackTrace();
         }
     }
 
@@ -64,9 +61,9 @@ public class Client implements Runnable {
             socket.close();
             dataOutputStream.close();
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            System.out.println("Lost Connection");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Lost Connection");
         }
 
     }

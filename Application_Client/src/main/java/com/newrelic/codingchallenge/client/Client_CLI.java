@@ -60,7 +60,7 @@ public class Client_CLI implements Runnable {
             socket.close();
             dataOutputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Lost Connection");
         }
     }
 
