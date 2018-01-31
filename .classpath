@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Application_Client_Simulator/src/main/java"/>
+	<classpathentry kind="src" path="Application_Client/src/main/java"/>
+	<classpathentry kind="src" path="Application_Server/src/main/java"/>
+	<classpathentry kind="src" path="Application_Server/src/test/java"/>
+	<classpathentry kind="lib" path="Application_Client_Simulator/target/Application_Client_Simulator.jar"/>
+	<classpathentry kind="lib" path="Application_Client/target/Application_Client.jar"/>
+	<classpathentry kind="lib" path="Application_Server/target/Application_Server.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Application_Client/target/classes"/>
+</classpath>

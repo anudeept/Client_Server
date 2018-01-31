@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Application_Server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Application_Server_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Application_Server.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/../Application_Client_Simulator/src/main/java/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="Application_Server" />
+      </element>
+      <element id="library" level="project" name="Maven: com.google.guava:guava:20.0" />
+      <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+      <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.11" />
+      <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
+      <element id="library" level="project" name="Maven: com.vmlens:concurrent-junit:1.0.2" />
+      <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.7" />
+    </root>
+  </artifact>
+</component>

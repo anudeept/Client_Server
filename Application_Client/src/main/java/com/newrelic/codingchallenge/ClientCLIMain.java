@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
  * @author : anudeep on 1/29/18
  * @project : Application_Server
  */
-public class ClientMain {
+public class ClientCLIMain {
 
     public static void main(String[] args) {
         Properties props = new Properties();
