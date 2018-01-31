@@ -2,6 +2,9 @@ package com.newrelic.codingchallenge;
 
 import com.newrelic.codingchallenge.client.Client_CLI;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +17,16 @@ import java.util.stream.IntStream;
 public class ClientMain {
 
     public static void main(String[] args) {
-        Thread clientThread= new Thread(new Client_CLI());
+        Properties props = new Properties();
+        try (InputStream resourceStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties")) {
+            props.load(resourceStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String host = props.getProperty("Host");
+        int port = Integer.parseInt(props.getProperty("Port"));
+
+        Thread clientThread= new Thread(new Client_CLI(host,port));
         clientThread.start();
     }
 }

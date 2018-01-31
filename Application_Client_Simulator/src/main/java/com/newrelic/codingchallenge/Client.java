@@ -21,20 +21,25 @@ public class Client implements Runnable {
     int count = 0;
     DataOutputStream dataOutputStream;
 
-    public Client(int id) {
+    String host;
+    int port;
+
+    public Client(int id, String host, int port) {
         this.id = id;
+        this.host = host;
+        this.port = port;
     }
 
     public void run() {
         try {
-            inetAddress = InetAddress.getByName("localhost");
-            socket = new Socket(inetAddress, 4000);
+            inetAddress = InetAddress.getByName(host);
+            socket = new Socket(inetAddress, port);
             System.out.println(id + " : " + socket);
             dataOutputStream = new DataOutputStream((socket.getOutputStream()));
 
             while (true) {
                 dataOutputStream.writeUTF(RandomStringUtils.randomNumeric(9));
-             //   dataOutputStream.writeUTF(String.format("%n"));
+                //   dataOutputStream.writeUTF(String.format("%n"));
                 if (count == 100000) {
                     count = 0;
                     Thread.sleep(1);

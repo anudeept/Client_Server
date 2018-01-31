@@ -2,6 +2,7 @@ package com.newrelic.codingchallenge.client;
 
 import java.io.*;
 import java.net.*;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
@@ -12,15 +13,20 @@ public class Client_CLI implements Runnable {
     InetAddress inetAddress;
     Socket socket;
     int id;
+    Properties props;
     DataOutputStream dataOutputStream;
+    String host;
+    int port;
 
-    public Client_CLI() {
+    public Client_CLI(String host, int port) {
+        this.host = host;
+        this.port = port;
     }
 
     public void run() {
         try {
-            inetAddress = InetAddress.getByName("localhost");
-            socket = new Socket(inetAddress, 4000);
+            inetAddress = InetAddress.getByName(host);
+            socket = new Socket(inetAddress, port);
             Scanner sc = new Scanner(System.in);
             System.out.println(Thread.currentThread().getName() + id + " : " + socket);
             dataOutputStream = new DataOutputStream((socket.getOutputStream()));
@@ -40,7 +46,7 @@ public class Client_CLI implements Runnable {
             close();
         } catch (SocketException e) {
             close();
-        }catch (EOFException e) {
+        } catch (EOFException e) {
             close();
         } catch (IOException e) {
             close();

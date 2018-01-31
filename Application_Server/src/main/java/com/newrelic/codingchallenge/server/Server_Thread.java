@@ -17,8 +17,8 @@ public class Server_Thread extends Thread {
     private boolean accept_Client = true;
     private Socket socket = null;
 
-    public Server_Thread() throws IOException {
-        this.serverSocket = new ServerSocket(4000);
+    public Server_Thread(int port) throws IOException {
+        this.serverSocket = new ServerSocket(port);
         pool = Executors.newFixedThreadPool(5);
 
     }
