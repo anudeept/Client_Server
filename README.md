@@ -24,7 +24,7 @@
 * Client_Handler - Runnable class which accepts data continuously from client and validates. if data is valid it inserts into log files
 * DataStore - Acts as a static data store for server Application which store list of unique numbers for validation
 
-## How to Runs
+## How to Run
 Download Client_Server project from GitHub
 
 ````
