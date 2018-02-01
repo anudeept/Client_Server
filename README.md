@@ -15,6 +15,7 @@
 
 ## Assumptions
 * Storing unique numbers in HashSet to avoid duplicates this leads to continuous increase of memory on heavy load. to overcome this we can increase memory by "-Xmx" parameter while running or periodic flushing of data will help
+* This Server only supports one server to many client apporch it won't support scalable architecture (Many to Many). 
 * Default port is 4000 but user can change in config.properties file
 
 ## Code Flow
